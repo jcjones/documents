@@ -306,6 +306,8 @@ A Request Token that does not include a timestamp is valid for a single use and 
 
 The binding SHALL use a digital signature algorithm or a cryptographic hash algorithm at least as stro
 
+**Required Website Content**: Either a Random Value or a Request Token, optionally concatenated with additional information as specified by the CA.
+
 **Requirements**: The Baseline Requirements found in this document.
 
 **Reserved IP Address**: An IPv4 or IPv6 address that the IANA has marked as reserved:
@@ -544,7 +546,7 @@ The Random Value SHALL remain valid for use in a confirming response for no more
 Confirming the Applicant's control over the requested FQDN by relying upon the attestation to the authority of the Applicant to request a Certificate contained in a Domain Authorization Document. The Domain Authorization Document MUST substantiate that the communication came from the Domain Contact.  The CA MUST verify that the Domain Authorization Document was either (i) dated on or after the date of the domain validation request or (ii) that the WHOIS data has not materially changed since a previously provided Domain Authorization Document for the Domain Name Space; or
 
 ##### 3.2.2.4.6 Agreed-Upon Change to Website
-Confirming the Applicant's control over the requested FQDN by confirming the presence of a Random Value or Request Token (contained in the content of a file or on a web page in the form of a meta tag) under the "/.well-known/pki-validation" directory, or another path registered with IANA for the purpose of Domain Validation, on the Authorization Domain Name that can be validated over an Authorized Port.
+Confirming the Applicant's control over the requested FQDN by confirming the presence of Required Website Content (contained in the content of a file or on a web page in the form of a meta tag) under the "/.well-known/pki-validation" directory, or another path registered with IANA for the purpose of Domain Validation, on the Authorization Domain Name that can be validated over an Authorized Port. The entire Required Website Content MUST NOT appear in the path used to retrieve the file or web page.
 
 If a Random Value is used, the CA or Delegated Third Party SHALL provide a Random Value unique to the certificate request and SHALL not use the Random Value after the longer of (i) 30 days or (ii) if the Applicant submitted the certificate request, the timeframe permitted for reuse of validated information relevant to the certificate (such as in Section 3.3.1 of these Guidelines or Section 11.14.3 of the EV Guidelines).
 
