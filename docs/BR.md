@@ -306,7 +306,7 @@ A Request Token that does not include a timestamp is valid for a single use and 
 
 The binding SHALL use a digital signature algorithm or a cryptographic hash algorithm at least as stro
 
-**Required Website Content**: Either a Random Value or a Request Token, optionally concatenated with additional information to uniquely identify the Subscriber as specified by the CA.
+**Required Website Content**: Either a Random Value or a Request Token, together with additional information that uniquely identifies the Subscriber, as specified by the CA.
 
 **Requirements**: The Baseline Requirements found in this document.
 
