@@ -570,7 +570,7 @@ Confirming the Applicant's control over the requested FQDN by confirming the pre
 
 ##### 3.2.2.4.10. TLS Using a Random Number
 
-Confirming the Applicant's control over the requested FQDN by confirming the presence of a Random Value within a Certificate which is accessible by the CA via TLS over an Authorized Port.
+Confirming the Applicant's control over the requested FQDN by confirming the presence on the Authorization Domain Name of a Random Value within a Certificate which is accessible by the CA via TLS over an Authorized Port.
 
 #### 3.2.2.5 Authentication for an IP Address
 For each IP Address listed in a Certificate, the CA SHALL confirm that, as of the date the Certificate was issued, the Applicant has control over the IP Address by:
